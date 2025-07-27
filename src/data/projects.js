@@ -5,7 +5,7 @@ export const projects = [
     description:
       "A comprehensive dental clinic management system with appointment scheduling, patient records, and billing functionality.",
     image: "/images/pakhareDentalClinic.png", // You'll add actual images later
-    techStack: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+    techStack: ["React.js", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
     features: [
       "Online appointment booking system",
       "Patient management dashboard",
@@ -42,7 +42,7 @@ export const projects = [
     description:
       "A telemedicine platform connecting patients with healthcare providers through secure video consultations and appointment management.",
     image: "/images/docmeet.png",
-    techStack: ["React", "WebRTC", "Socket.io", "Node.js", "MongoDB", "JWT"],
+    techStack: ["React.js", "WebRTC", "Socket.io", "Node.js", "MongoDB", "JWT"],
     features: [
       "Video consultation system",
       "Doctor-patient matching",
@@ -52,6 +52,43 @@ export const projects = [
       "Appointment scheduling",
     ],
     liveUrl: "https://docmeet-frontend.onrender.com/",
+    githubUrl: "#",
+    category: "Healthcare",
+  },
+  {
+    id: 4,
+    title: "Fortune Hospital Management System",
+    description:
+      "A full-stack web application designed to streamline and digitize hospital operations. This system enables efficient management of patients, doctors, appointments, billing, and administrative tasks..",
+    image: "/images/fortunehospital.png",
+    techStack: ["React.js", "Laravel", "PHP", "Bootstrap", "WebSockets", "MySQL"],
+    features: [
+      "Role-based access control for Admin, Doctor, and Receptionist",
+      "Patient registration & appointment booking",
+      "Doctor scheduling and availability management",
+      "Medical records and diagnosis history",
+      "Billing and payment tracking",
+      "Dashboard analytics for hospital metrics",
+    ],
+    liveUrl: "https://peakprohms.com/",
+    githubUrl: "#",
+    category: "Healthcare",
+  },
+  {
+    id: 5,
+    title: "Fitme Gym Management System",
+    description:
+      "A web-based application developed to manage gym memberships, user profiles, and subscription plans.",
+    image: "/images/fitmegym.png",
+    techStack: ["React.js", "Postgres", "PHP", "Bootstrap"],
+    features: [
+      "Member registration and login",
+      "Admin dashboard for managing members and plans",
+      "Subscription plan creation and assignment",
+      "Membership duration and fee tracking",
+      "Responsive UI using Bootstrap for multi-device support",
+    ],
+    liveUrl: "https://example.com/",
     githubUrl: "#",
     category: "Healthcare",
   },
@@ -74,4 +111,7 @@ export const skills = [
   "AWS",
   "Docker",
   "Git",
+  "PHP",
+  "Laravel",
+  "Wordpress"
 ];
