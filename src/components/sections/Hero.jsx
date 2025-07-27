@@ -132,7 +132,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="flex flex-col items-center space-y-2">
           <span className="text-sm text-gray-500">Scroll Down</span>
           <svg
@@ -149,7 +149,7 @@ const Hero = () => {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
     </SectionWrapper>
   );
 };
