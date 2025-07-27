@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+//This is the contact Schema for MongoDB using Mongoose
 const ContactSchema = new mongoose.Schema(
   {
     name: {
