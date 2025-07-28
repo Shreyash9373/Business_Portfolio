@@ -61,7 +61,14 @@ export const projects = [
     description:
       "A full-stack web application designed to streamline and digitize hospital operations. This system enables efficient management of patients, doctors, appointments, billing, and administrative tasks..",
     image: "/images/fortunehospital.png",
-    techStack: ["React.js", "Laravel", "PHP", "Bootstrap", "WebSockets", "MySQL"],
+    techStack: [
+      "React.js",
+      "Laravel",
+      "PHP",
+      "Bootstrap",
+      "WebSockets",
+      "MySQL",
+    ],
     features: [
       "Role-based access control for Admin, Doctor, and Receptionist",
       "Patient registration & appointment booking",
@@ -76,6 +83,24 @@ export const projects = [
   },
   {
     id: 5,
+    title: "Kids Dental Clinic User Interface",
+    description:
+      "A user-friendly web interface designed specifically for a Kids Dental Clinic. The UI focuses on a playful yet professional design to create a welcoming experience for young patients and their parents while supporting efficient clinic operations.",
+    image: "/images/kids_dental_clinic.png",
+    techStack: ["React.js", "Node.js", "ExpressJS", "TailwindCss", "MongoDB"],
+    features: [
+      "Colorful, child-friendly UI/UX design",
+      "Doctor profile showcase with specialization details",
+      "Animated illustrations to reduce dental anxiety",
+      "Contact & location section with embedded Google Maps",
+      "Responsive layout for mobile and tablet devices",
+    ],
+    liveUrl: "https://kids-dental-frontend-9zyv.vercel.app/",
+    githubUrl: "#",
+    category: "Healthcare",
+  },
+  {
+    id: 6,
     title: "Fitme Gym Management System",
     description:
       "A web-based application developed to manage gym memberships, user profiles, and subscription plans.",
@@ -113,7 +138,7 @@ export const skills = [
   "Git",
   "PHP",
   "Laravel",
-  "Wordpress"
+  "Wordpress",
 ];
 
 export const testimonials = [
