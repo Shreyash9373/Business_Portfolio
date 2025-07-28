@@ -11,7 +11,7 @@ const Testimonial = () => {
         <>
             <section id="testimonials" className="bg-gray-100 py-12 px-4 text-center section-padding">
                 <h3 className="text-2xl font-bold text-gray-800 mb-8">What Our Clients Say</h3>
-                <div className="max-w-xl mx-auto">
+                <div className="max-w-3xl mx-auto">
                     <Swiper
                         modules={[Pagination]}
                         pagination={{ clickable: true }}
