@@ -115,3 +115,32 @@ export const skills = [
   "Laravel",
   "Wordpress"
 ];
+
+export const testimonials = [
+  {
+    quote: "Delivered the project on time with excellent attention to detail. The final design was exactly what we envisioned.",
+    rating: 5,
+    name: "Jessica Warren, CEO at BrandMuse"
+  },
+  {
+    quote: "Very responsive and easy to work with. The website now loads faster and looks far more professional.",
+    rating: 5,
+    name: "Rahul Mehra, CTO at TechSculpt"
+  },
+  {
+    quote: "Brought creative ideas to the table and implemented them flawlessly. Highly impressed with the results.",
+    rating: 4,
+    name: "Laura Chen, Product Manager at Horizon Labs"
+  },
+  {
+    quote: "The integration process was smooth, and the backend functionalities were built with long-term use in mind.",
+    rating: 5,
+    name: "Daniel Okafor, Director at NovaCore Systems"
+  },
+  {
+    quote: "Understood the requirements clearly and provided clean, maintainable code. Would definitely collaborate again.",
+    rating: 5,
+    name: "Maya Kapoor, Founder of EcoMarkt"
+  }
+
+];
