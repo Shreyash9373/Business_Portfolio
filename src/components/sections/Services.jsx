@@ -34,18 +34,7 @@ const Services = () => {
 
         // Mobile
         "(max-width: 767px)": function () {
-          const timeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: devProcessRef.current,
-              start: "top top",
-              end: "+=800", // Adjust based on animation length
-              scrub: true,
-              pin: true,
-            }
-          });
 
-          timeline
-            .from(".step", { scale: 0, stagger: 0.2 });
         },
       });
     }, devProcessRef);
