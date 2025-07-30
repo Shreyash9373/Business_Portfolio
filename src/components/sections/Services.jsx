@@ -16,23 +16,41 @@ const Services = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: devProcessRef.current,
-          start: "top 15%",
-          scrub: 2,
-          pin: true,
-        }
-      });
-      timeline.from(".step", {
-        scale: 0,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "back.out(1.7)"
+      ScrollTrigger.matchMedia({
+        // Desktop
+        "(min-width: 768px)": function () {
+          const timeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: devProcessRef.current,
+              start: "top 30%",
+              scrub: true,
+              pin: true,
+            }
+          });
+
+          timeline
+            .from(".step", { scale: 0, stagger: 0.2 });
+        },
+
+        // Mobile
+        "(max-width: 767px)": function () {
+          const timeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: devProcessRef.current,
+              start: "top top",
+              end: "+=800", // Adjust based on animation length
+              scrub: true,
+              pin: true,
+            }
+          });
+
+          timeline
+            .from(".step", { scale: 0, stagger: 0.2 });
+        },
       });
     }, devProcessRef);
-    return () => ctx.revert();
+
+    return () => ctx.revert(); // Clean up
   }, []);
 
   return (
