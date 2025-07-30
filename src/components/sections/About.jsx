@@ -1,8 +1,19 @@
+"use client";
 import React from "react";
 import SectionWrapper from "../ui/SectionWrapper";
-import { skills } from "../../data/projects";
-
+import { useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 const About = () => {
+
+  const leftColumn = useRef();
+  const rightColumn = useRef();
+  const aboutUs = useRef();
+  const storyRef = useRef();
+
+  useScrollReveal([
+    { ref: aboutUs, options: { y: 50, opacity: 0, duration: 0.6, } },
+  ])
+
   const experiences = [
     {
       title: "Full-Stack Developer",
@@ -22,9 +33,9 @@ const About = () => {
 
   return (
     <SectionWrapper id="about" background="white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto" ref={aboutUs}>
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" ref={aboutUs}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
@@ -36,9 +47,9 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Story & Experience */}
-          <div className="space-y-8">
+          <div ref={leftColumn} className="space-y-8">
             {/* Personal Story */}
-            <div>
+            <div ref={storyRef}>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 My Journey
               </h3>
@@ -99,7 +110,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Skills */}
-          <div className="space-y-8">
+          <div ref={rightColumn} className="space-y-8">
             {/* Technical Skills */}
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">

@@ -1,11 +1,43 @@
+"use client";
 import React from "react";
 import SectionWrapper from "../ui/SectionWrapper";
 import { services } from "../../data/services";
+import { useEffect, useRef } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
+
+  const servicesRef = useRef();
+  const devProcessRef = useRef();
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: devProcessRef.current,
+          start: "top 30%",
+          scrub: 2,
+          pin: true,
+        }
+      });
+      timeline.from(".step", {
+        scale: 0,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "back.out(1.7)"
+      });
+    }, devProcessRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <SectionWrapper id="services" background="gray">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto" ref={servicesRef}>
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -83,7 +115,7 @@ const Services = () => {
         </div>
 
         {/* Process Section */}
-        <div className="mt-20">
+        <div className="mt-20" ref={devProcessRef}>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               My Development Process
@@ -123,7 +155,7 @@ const Services = () => {
             ].map((process, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto step">
                     {process.step}
                   </div>
                   {index < 3 && (
