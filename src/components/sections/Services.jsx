@@ -19,7 +19,7 @@ const Services = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: devProcessRef.current,
-          start: "top 30%",
+          start: "top 15%",
           scrub: 2,
           pin: true,
         }
