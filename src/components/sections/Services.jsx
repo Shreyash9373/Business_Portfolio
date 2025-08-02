@@ -29,7 +29,7 @@ const Services = () => {
           });
 
           timeline
-            .from(".step", { scale: 0, stagger: 0.2 });
+            .from(".step", { scale: 0, opacity: 0, stagger: 0.2, ease: "expo.out" });
         },
 
         // Mobile
@@ -133,7 +133,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-8 lg:pb-[180px]">
             {[
               {
                 step: "01",
@@ -160,19 +160,19 @@ const Services = () => {
                   "Deploying your project and providing ongoing maintenance and support",
               },
             ].map((process, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center process"  >
                 <div className="relative mb-4">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto step">
                     {process.step}
                   </div>
                   {index < 3 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-200 transform -translate-y-0.5"></div>
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-200 transform -translate-y-0.5 step"></div>
                   )}
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                <h4 className="text-xl font-semibold text-gray-900 mb-2 step">
                   {process.title}
                 </h4>
-                <p className="text-gray-600 text-sm">{process.description}</p>
+                <p className="text-gray-600 text-sm step">{process.description}</p>
               </div>
             ))}
           </div>
